@@ -8,8 +8,12 @@
 import Foundation
 
 struct AchievementsResponse: Codable {
-    let success: Bool
-    let status: Int
-    let overview: String
+    let success: Bool?
+    let status: Int?
+    let overview: Overview?
     let achievements: [AchievementsModel]?
+}
+
+struct Overview: Codable {
+    let title: String
 }

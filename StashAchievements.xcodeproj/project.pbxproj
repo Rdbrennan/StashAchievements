@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		680ABEC425D5AD0C005C1DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */; };
-		680ABEC625D5AD0C005C1DC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEC525D5AD0C005C1DC5 /* SceneDelegate.swift */; };
-		680ABECB25D5AD0C005C1DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680ABEC925D5AD0C005C1DC5 /* Main.storyboard */; };
 		680ABED025D5AD0F005C1DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */; };
 		680ABED325D5AD0F005C1DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */; };
 		680ABEDE25D5AD0F005C1DC5 /* StashAchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEDD25D5AD0F005C1DC5 /* StashAchievementsTests.swift */; };
@@ -25,6 +23,8 @@
 		680ABF2A25D5AF18005C1DC5 /* AchievementsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF2925D5AF18005C1DC5 /* AchievementsProtocols.swift */; };
 		680ABF3825D5AFA5005C1DC5 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 680ABF3725D5AFA5005C1DC5 /* achievements.json */; };
 		680ABF4025D5B84C005C1DC5 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF3F25D5B84C005C1DC5 /* AchievementsResponse.swift */; };
+		680ABF9025D5C73E005C1DC5 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */; };
+		680ABFA125D5D179005C1DC5 /* CellSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABFA025D5D179005C1DC5 /* CellSpacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,6 @@
 /* Begin PBXFileReference section */
 		680ABEC025D5AD0C005C1DC5 /* StashAchievements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashAchievements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		680ABEC525D5AD0C005C1DC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		680ABECA25D5AD0C005C1DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		680ABED225D5AD0F005C1DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		680ABED425D5AD0F005C1DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +67,8 @@
 		680ABF2925D5AF18005C1DC5 /* AchievementsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsProtocols.swift; sourceTree = "<group>"; };
 		680ABF3725D5AFA5005C1DC5 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
 		680ABF3F25D5B84C005C1DC5 /* AchievementsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsResponse.swift; sourceTree = "<group>"; };
+		680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		680ABFA025D5D179005C1DC5 /* CellSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSpacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,6 @@
 				680ABF4425D5B8B5005C1DC5 /* LocalData */,
 				680ABEF925D5AD34005C1DC5 /* SupportingFiles */,
 				680ABEFA25D5AD4F005C1DC5 /* Modules */,
-				680ABEC925D5AD0C005C1DC5 /* Main.storyboard */,
 				680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */,
 				680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */,
 				680ABED425D5AD0F005C1DC5 /* Info.plist */,
@@ -152,7 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */,
-				680ABEC525D5AD0C005C1DC5 /* SceneDelegate.swift */,
+				680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */,
+				680ABFA025D5D179005C1DC5 /* CellSpacing.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -362,7 +362,6 @@
 				680ABED025D5AD0F005C1DC5 /* Assets.xcassets in Resources */,
 				680ABF3825D5AFA5005C1DC5 /* achievements.json in Resources */,
 				680ABF0725D5AE85005C1DC5 /* AchievementsListCollectionViewCell.xib in Resources */,
-				680ABECB25D5AD0C005C1DC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,15 +387,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				680ABF2A25D5AF18005C1DC5 /* AchievementsProtocols.swift in Sources */,
+				680ABFA125D5D179005C1DC5 /* CellSpacing.swift in Sources */,
 				680ABF2025D5AEF9005C1DC5 /* AchievementsModel.swift in Sources */,
 				680ABF0625D5AE85005C1DC5 /* AchievementsListCollectionViewCell.swift in Sources */,
+				680ABF9025D5C73E005C1DC5 /* CustomProgressView.swift in Sources */,
 				680ABF1B25D5AEEC005C1DC5 /* AchievementsPresenter.swift in Sources */,
 				680ABF4025D5B84C005C1DC5 /* AchievementsResponse.swift in Sources */,
 				680ABF1325D5AEC5005C1DC5 /* AchievementsInteractor.swift in Sources */,
 				680ABF2525D5AF08005C1DC5 /* AchievementsRouter.swift in Sources */,
 				680ABEC425D5AD0C005C1DC5 /* AppDelegate.swift in Sources */,
 				680ABF0D25D5AEA7005C1DC5 /* AchievementsListViewController.swift in Sources */,
-				680ABEC625D5AD0C005C1DC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,14 +432,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		680ABEC925D5AD0C005C1DC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				680ABECA25D5AD0C005C1DC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

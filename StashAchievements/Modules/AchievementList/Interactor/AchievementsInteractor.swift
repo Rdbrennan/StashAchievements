@@ -19,12 +19,11 @@ class AchievementsInteractor: AchievementsListPresentorToInteractorProtocol {
         if let path = Bundle.main.path(forResource: "achievements", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-
                 let decoder = JSONDecoder()
                 let achievementsResponse = try decoder.decode(AchievementsResponse.self, from: data)
                 guard let articles = achievementsResponse.achievements else { return }
                 self.achievements = articles
-                self.presenter?.liveNewsFetched()
+                self.presenter?.AchievementsFetched()
             } catch let error {
                 print(error)
             }

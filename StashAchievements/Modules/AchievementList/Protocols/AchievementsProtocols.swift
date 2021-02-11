@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 protocol AchievementsListPresenterToViewProtocol: class {
-    func showNews()
+    func showAchievements()
     func showError()
 }
 
 
 protocol AchievementsListInteractorToPresenterProtocol: class {
-    func liveNewsFetched()
-    func liveNewsFetchedFailed()
+    func AchievementsFetched()
+    func AchievementsFetchedFailed()
 }
 
 protocol AchievementsListPresentorToInteractorProtocol: class {

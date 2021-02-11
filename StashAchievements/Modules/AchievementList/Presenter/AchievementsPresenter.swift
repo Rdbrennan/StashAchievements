@@ -28,14 +28,14 @@ class AchievementsPresenter: AchievementsListViewToPresenterProtocol {
     }
 }
 
-// MARK: - LiveNewsListInteractorToPresenterProtocol
+// MARK: - AchievementsListInteractorToPresenterProtocol
 extension AchievementsPresenter: AchievementsListInteractorToPresenterProtocol {
 
-    func liveNewsFetched() {
-        view?.showNews()
+    func AchievementsFetched() {
+        view?.showAchievements()
     }
 
-    func liveNewsFetchedFailed() {
+    func AchievementsFetchedFailed() {
         view?.showError()
     }
 }
