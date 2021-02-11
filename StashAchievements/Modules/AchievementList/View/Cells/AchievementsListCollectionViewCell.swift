@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import AlamoFire
+import AlamofireImage
 
 class AchievementsListCollectionViewCell: UICollectionViewCell {
     static var cellId: String = "AchievementsListCollectionViewCell"
@@ -31,6 +31,7 @@ class AchievementsListCollectionViewCell: UICollectionViewCell {
 
         levelView.layer.cornerRadius = levelView.frame.width / 2
         levelView.layer.masksToBounds = false
+        achievementImageView.contentMode = .scaleAspectFill
 
     }()
 
@@ -43,7 +44,10 @@ class AchievementsListCollectionViewCell: UICollectionViewCell {
         levelLabel.text = level
         progressLabel.text = "\(progress)pts"
         totalLabel.text = "\(total)pts"
-//        alamo
+        if let url = URL(string: imageURL){
+            achievementImageView.af_setImage(withURL: url)
+        }
+        levelView.layer.opacity =  accessible ? 0.9 : 1.0
         achievementsProgressView.progress = calculateProgress(progress: progress, total: total)
         accessibleOverlay.isHidden = accessible
     }

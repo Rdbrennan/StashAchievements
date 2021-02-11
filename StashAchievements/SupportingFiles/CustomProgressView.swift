@@ -12,7 +12,7 @@ class CustomProgressView: UIProgressView{
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        let maskLayerPath = UIBezierPath(roundedRect: bounds, cornerRadius: 4.0)
+        let maskLayerPath = UIBezierPath(roundedRect: bounds, cornerRadius: 6.0)
         let maskLayer = CAShapeLayer()
         maskLayer.frame = self.bounds
         maskLayer.path = maskLayerPath.cgPath

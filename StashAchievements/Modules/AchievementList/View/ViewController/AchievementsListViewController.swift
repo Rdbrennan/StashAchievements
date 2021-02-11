@@ -26,12 +26,17 @@ class AchievementsListViewController: UIViewController {
     }
     private func setupNavBar(){
         title = "Smart Investing"
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.412794888, green: 0.2138850689, blue: 0.8086236119, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.463628605, green: 0.1680410472, blue: 0.8421655145, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 20), NSAttributedString.Key.foregroundColor: UIColor.white]
 
         let infoButton = UIButton(type: .infoLight)
         infoButton.tintColor = .white
         navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: infoButton)]
+
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "backImage"), for: .normal)
+        backButton.tintColor = .white
+        navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: backButton)]
     }
 
 
@@ -43,7 +48,7 @@ class AchievementsListViewController: UIViewController {
         AchievementsCollectionView.setCollectionViewLayout(layout, animated: false)
         AchievementsCollectionView.dataSource = self
         AchievementsCollectionView.delegate = self
-        AchievementsCollectionView.showsHorizontalScrollIndicator = false
+        AchievementsCollectionView.showsVerticalScrollIndicator = false
         AchievementsCollectionView.layer.borderColor = UIColor.clear.cgColor
         AchievementsCollectionView.contentInset = UIEdgeInsets(top: 40, left: 10, bottom: 10, right: 10)
         AchievementsCollectionView.register(UINib(nibName: "AchievementsListCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: AchievementsListCollectionViewCell.cellId)
