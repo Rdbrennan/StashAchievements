@@ -15,12 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        navigateToRootVC()
+        
+        return true
+    }
+    private func navigateToRootVC() {
         let achievements = AchievementsRouter.createModule()
         let rootNav = UINavigationController(rootViewController: achievements)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootNav
         window?.makeKeyAndVisible()
-
-        return true
     }
 }
+

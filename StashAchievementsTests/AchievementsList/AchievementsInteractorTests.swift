@@ -25,7 +25,7 @@ class AchievementsInteractorTests: XCTestCase {
       super.tearDown()
     }
 
-    func testAchievementsParseError(){
+    func testAchievementsParseError() {
         interactor.fetchAchievements(resource: "fakeAchievements")
         if !mockPresenter.parseFailed {
             XCTFail("parsing error failed")
@@ -34,9 +34,8 @@ class AchievementsInteractorTests: XCTestCase {
 }
 
 class AchievementsMockPresenter: AchievementsListInteractorToPresenterProtocol{
-    func AchievementsFetched() {
-        
-    }
+    func AchievementsFetched() {}
+    
     var parseFailed = false
     func AchievementsFetchedFailed() {
         parseFailed = true

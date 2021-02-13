@@ -59,7 +59,7 @@ class AchievementsListCollectionViewCell: UICollectionViewCell {
         _ = setupUI
     }
 
-    func calculateProgress(progress: Int, total: Int) -> Float{
+    func calculateProgress(progress: Int, total: Int) -> Float {
         var progressResult = Float()
         progressResult = (Float(progress)/Float(total))
         return progressResult

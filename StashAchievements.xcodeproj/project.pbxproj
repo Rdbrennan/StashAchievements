@@ -27,8 +27,10 @@
 		680ABFA125D5D179005C1DC5 /* CellSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABFA025D5D179005C1DC5 /* CellSpacing.swift */; };
 		680AC04225D6467E005C1DC5 /* AchievementsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */; };
 		680AC05025D646F9005C1DC5 /* AchievementsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */; };
-		680AC05925D64AC7005C1DC5 /* AchievementsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */; };
 		680AC06525D64B90005C1DC5 /* AchievementsEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */; };
+		68E555FE25D75ABE007AF58F /* AchievementsListViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E555FD25D75ABE007AF58F /* AchievementsListViewController+UICollectionViewDataSource.swift */; };
+		68E5561225D75C11007AF58F /* +Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E5561125D75C11007AF58F /* +Color.swift */; };
+		68E5561D25D75E10007AF58F /* AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E5561C25D75E10007AF58F /* AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		68EFE5CA25D74B3F0025F57A /* fakeAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 68EFE5C925D74B3F0025F57A /* fakeAchievements.json */; };
 		CF2701495067EDFD747317C6 /* Pods_StashAchievementsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A48CFB333E2467804730A6 /* Pods_StashAchievementsTests.framework */; };
 		DDBDA2C58984998C707581E2 /* Pods_StashAchievements_StashAchievementsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C8EEC0CC717B52BDA54C17 /* Pods_StashAchievements_StashAchievementsUITests.framework */; };
@@ -82,8 +84,10 @@
 		680ABFA025D5D179005C1DC5 /* CellSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSpacing.swift; sourceTree = "<group>"; };
 		680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenterTests.swift; sourceTree = "<group>"; };
 		680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractorTests.swift; sourceTree = "<group>"; };
-		680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouterTests.swift; sourceTree = "<group>"; };
 		680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsEntityTests.swift; sourceTree = "<group>"; };
+		68E555FD25D75ABE007AF58F /* AchievementsListViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementsListViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		68E5561125D75C11007AF58F /* +Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Color.swift"; sourceTree = "<group>"; };
+		68E5561C25D75E10007AF58F /* AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		68EFE5C925D74B3F0025F57A /* fakeAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fakeAchievements.json; sourceTree = "<group>"; };
 		88C8EEC0CC717B52BDA54C17 /* Pods_StashAchievements_StashAchievementsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StashAchievements_StashAchievementsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AF0EB65C9E107A5F7919ED /* Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig"; path = "Target Support Files/Pods-StashAchievements-StashAchievementsUITests/Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,9 +158,11 @@
 		680ABEC225D5AD0C005C1DC5 /* StashAchievements */ = {
 			isa = PBXGroup;
 			children = (
+				68E5561025D75BFF007AF58F /* Extensions */,
 				680ABEF925D5AD34005C1DC5 /* SupportingFiles */,
 				680ABEFA25D5AD4F005C1DC5 /* Modules */,
 				680AC08025D652EB005C1DC5 /* Resources */,
+				680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */,
 				680ABED425D5AD0F005C1DC5 /* Info.plist */,
 			);
 			path = StashAchievements;
@@ -184,8 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				680ABF4425D5B8B5005C1DC5 /* LocalData */,
-				680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */,
-				680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */,
 				680ABFA025D5D179005C1DC5 /* CellSpacing.swift */,
 			);
 			path = SupportingFiles;
@@ -267,6 +271,7 @@
 			children = (
 				680ABF0425D5AE85005C1DC5 /* AchievementsListCollectionViewCell.swift */,
 				680ABF0525D5AE85005C1DC5 /* AchievementsListCollectionViewCell.xib */,
+				680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -276,6 +281,8 @@
 			children = (
 				680ABF0B25D5AEA7005C1DC5 /* AchievementsListViewController.swift */,
 				680ABF0C25D5AEA7005C1DC5 /* AchievementsListViewController.xib */,
+				68E555FD25D75ABE007AF58F /* AchievementsListViewController+UICollectionViewDataSource.swift */,
+				68E5561C25D75E10007AF58F /* AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -295,7 +302,6 @@
 				680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */,
 				680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */,
 				680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */,
-				680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */,
 			);
 			path = AchievementsList;
 			sourceTree = "<group>";
@@ -307,6 +313,14 @@
 				680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		68E5561025D75BFF007AF58F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68E5561125D75C11007AF58F /* +Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E6B2413D400E5E4C805A6F54 /* Pods */ = {
@@ -330,6 +344,7 @@
 			buildConfigurationList = 680ABEED25D5AD0F005C1DC5 /* Build configuration list for PBXNativeTarget "StashAchievements" */;
 			buildPhases = (
 				65DC788EF63BE1A0BCDADF47 /* [CP] Check Pods Manifest.lock */,
+				68E555E725D757A9007AF58F /* ShellScript */,
 				680ABEBC25D5AD0C005C1DC5 /* Sources */,
 				680ABEBD25D5AD0C005C1DC5 /* Frameworks */,
 				680ABEBE25D5AD0C005C1DC5 /* Resources */,
@@ -500,6 +515,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		68E555E725D757A9007AF58F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		99FC13919789769B74C44391 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,8 +597,11 @@
 			files = (
 				680ABF2A25D5AF18005C1DC5 /* AchievementsProtocols.swift in Sources */,
 				680ABFA125D5D179005C1DC5 /* CellSpacing.swift in Sources */,
+				68E555FE25D75ABE007AF58F /* AchievementsListViewController+UICollectionViewDataSource.swift in Sources */,
 				680ABF2025D5AEF9005C1DC5 /* AchievementsModel.swift in Sources */,
 				680ABF0625D5AE85005C1DC5 /* AchievementsListCollectionViewCell.swift in Sources */,
+				68E5561225D75C11007AF58F /* +Color.swift in Sources */,
+				68E5561D25D75E10007AF58F /* AchievementsListViewController+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				680ABF9025D5C73E005C1DC5 /* CustomProgressView.swift in Sources */,
 				680ABF1B25D5AEEC005C1DC5 /* AchievementsPresenter.swift in Sources */,
 				680ABF4025D5B84C005C1DC5 /* AchievementsResponse.swift in Sources */,
@@ -581,7 +616,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				680AC05925D64AC7005C1DC5 /* AchievementsRouterTests.swift in Sources */,
 				680AC04225D6467E005C1DC5 /* AchievementsPresenterTests.swift in Sources */,
 				680AC05025D646F9005C1DC5 /* AchievementsInteractorTests.swift in Sources */,
 				680AC06525D64B90005C1DC5 /* AchievementsEntityTests.swift in Sources */,

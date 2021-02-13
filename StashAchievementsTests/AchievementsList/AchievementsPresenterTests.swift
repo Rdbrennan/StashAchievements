@@ -26,7 +26,7 @@ class AchievementsPresenterTests: XCTestCase {
         presenter = nil
     }
 
-    func testViewShownOnFetchAchievementsSuccess() {
+    func testAchievementsView() {
         presenter.fetchAllAchievements()
         if !mockView.isAchievementsParsed {
             XCTFail("showAchievements func not called")
@@ -35,21 +35,18 @@ class AchievementsPresenterTests: XCTestCase {
 }
 
 class AchievementListMockView: AchievementsListPresenterToViewProtocol {
-    var isAchievementsParsed = false
 
     var achievementList:[Achievement]?
+    var isAchievementsParsed = false
+
     func showAchievements() {
         isAchievementsParsed = true
     }
 
-    func showError() {
-
-    }
+    func showError() {}
 }
 
 class AchievementListMockInteractor: AchievementsListPresenterToInteractorProtocol {
-
-
 
     var presenter: AchievementsListInteractorToPresenterProtocol?
     var achievements: [Achievement]?
