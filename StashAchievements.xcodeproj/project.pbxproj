@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		680ABEC425D5AD0C005C1DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEC325D5AD0C005C1DC5 /* AppDelegate.swift */; };
 		680ABED025D5AD0F005C1DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */; };
 		680ABED325D5AD0F005C1DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */; };
-		680ABEDE25D5AD0F005C1DC5 /* StashAchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEDD25D5AD0F005C1DC5 /* StashAchievementsTests.swift */; };
 		680ABEE925D5AD0F005C1DC5 /* StashAchievementsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABEE825D5AD0F005C1DC5 /* StashAchievementsUITests.swift */; };
 		680ABF0625D5AE85005C1DC5 /* AchievementsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF0425D5AE85005C1DC5 /* AchievementsListCollectionViewCell.swift */; };
 		680ABF0725D5AE85005C1DC5 /* AchievementsListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680ABF0525D5AE85005C1DC5 /* AchievementsListCollectionViewCell.xib */; };
@@ -26,6 +25,11 @@
 		680ABF4025D5B84C005C1DC5 /* AchievementsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF3F25D5B84C005C1DC5 /* AchievementsResponse.swift */; };
 		680ABF9025D5C73E005C1DC5 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */; };
 		680ABFA125D5D179005C1DC5 /* CellSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680ABFA025D5D179005C1DC5 /* CellSpacing.swift */; };
+		680AC04225D6467E005C1DC5 /* AchievementsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */; };
+		680AC05025D646F9005C1DC5 /* AchievementsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */; };
+		680AC05925D64AC7005C1DC5 /* AchievementsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */; };
+		680AC06525D64B90005C1DC5 /* AchievementsEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */; };
+		68EFE5CA25D74B3F0025F57A /* fakeAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 68EFE5C925D74B3F0025F57A /* fakeAchievements.json */; };
 		CF2701495067EDFD747317C6 /* Pods_StashAchievementsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A48CFB333E2467804730A6 /* Pods_StashAchievementsTests.framework */; };
 		DDBDA2C58984998C707581E2 /* Pods_StashAchievements_StashAchievementsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C8EEC0CC717B52BDA54C17 /* Pods_StashAchievements_StashAchievementsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,7 +63,6 @@
 		680ABED225D5AD0F005C1DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		680ABED425D5AD0F005C1DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680ABED925D5AD0F005C1DC5 /* StashAchievementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashAchievementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		680ABEDD25D5AD0F005C1DC5 /* StashAchievementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashAchievementsTests.swift; sourceTree = "<group>"; };
 		680ABEDF25D5AD0F005C1DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		680ABEE425D5AD0F005C1DC5 /* StashAchievementsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashAchievementsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		680ABEE825D5AD0F005C1DC5 /* StashAchievementsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashAchievementsUITests.swift; sourceTree = "<group>"; };
@@ -77,6 +80,11 @@
 		680ABF3F25D5B84C005C1DC5 /* AchievementsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsResponse.swift; sourceTree = "<group>"; };
 		680ABF8F25D5C73E005C1DC5 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		680ABFA025D5D179005C1DC5 /* CellSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSpacing.swift; sourceTree = "<group>"; };
+		680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenterTests.swift; sourceTree = "<group>"; };
+		680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractorTests.swift; sourceTree = "<group>"; };
+		680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouterTests.swift; sourceTree = "<group>"; };
+		680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsEntityTests.swift; sourceTree = "<group>"; };
+		68EFE5C925D74B3F0025F57A /* fakeAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fakeAchievements.json; sourceTree = "<group>"; };
 		88C8EEC0CC717B52BDA54C17 /* Pods_StashAchievements_StashAchievementsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StashAchievements_StashAchievementsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AF0EB65C9E107A5F7919ED /* Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig"; path = "Target Support Files/Pods-StashAchievements-StashAchievementsUITests/Pods-StashAchievements-StashAchievementsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC34F1E3D16B81DDC2A9899B /* Pods-StashAchievements-StashAchievementsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashAchievements-StashAchievementsUITests.release.xcconfig"; path = "Target Support Files/Pods-StashAchievements-StashAchievementsUITests/Pods-StashAchievements-StashAchievementsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,8 +156,7 @@
 			children = (
 				680ABEF925D5AD34005C1DC5 /* SupportingFiles */,
 				680ABEFA25D5AD4F005C1DC5 /* Modules */,
-				680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */,
-				680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */,
+				680AC08025D652EB005C1DC5 /* Resources */,
 				680ABED425D5AD0F005C1DC5 /* Info.plist */,
 			);
 			path = StashAchievements;
@@ -158,7 +165,7 @@
 		680ABEDC25D5AD0F005C1DC5 /* StashAchievementsTests */ = {
 			isa = PBXGroup;
 			children = (
-				680ABEDD25D5AD0F005C1DC5 /* StashAchievementsTests.swift */,
+				680AC04025D6464E005C1DC5 /* AchievementsList */,
 				680ABEDF25D5AD0F005C1DC5 /* Info.plist */,
 			);
 			path = StashAchievementsTests;
@@ -187,12 +194,12 @@
 		680ABEFA25D5AD4F005C1DC5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				680ABEFB25D5AD6C005C1DC5 /* AchievementList */,
+				680ABEFB25D5AD6C005C1DC5 /* AchievementsList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		680ABEFB25D5AD6C005C1DC5 /* AchievementList */ = {
+		680ABEFB25D5AD6C005C1DC5 /* AchievementsList */ = {
 			isa = PBXGroup;
 			children = (
 				680ABEFC25D5AD8E005C1DC5 /* View */,
@@ -202,7 +209,7 @@
 				680ABEFD25D5AD94005C1DC5 /* Router */,
 				680ABF0125D5ADBF005C1DC5 /* Protocols */,
 			);
-			path = AchievementList;
+			path = AchievementsList;
 			sourceTree = "<group>";
 		};
 		680ABEFC25D5AD8E005C1DC5 /* View */ = {
@@ -277,8 +284,29 @@
 			isa = PBXGroup;
 			children = (
 				680ABF3725D5AFA5005C1DC5 /* achievements.json */,
+				68EFE5C925D74B3F0025F57A /* fakeAchievements.json */,
 			);
 			path = LocalData;
+			sourceTree = "<group>";
+		};
+		680AC04025D6464E005C1DC5 /* AchievementsList */ = {
+			isa = PBXGroup;
+			children = (
+				680AC04F25D646F9005C1DC5 /* AchievementsInteractorTests.swift */,
+				680AC04125D6467E005C1DC5 /* AchievementsPresenterTests.swift */,
+				680AC06425D64B90005C1DC5 /* AchievementsEntityTests.swift */,
+				680AC05825D64AC7005C1DC5 /* AchievementsRouterTests.swift */,
+			);
+			path = AchievementsList;
+			sourceTree = "<group>";
+		};
+		680AC08025D652EB005C1DC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				680ABECF25D5AD0F005C1DC5 /* Assets.xcassets */,
+				680ABED125D5AD0F005C1DC5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E6B2413D400E5E4C805A6F54 /* Pods */ = {
@@ -291,7 +319,6 @@
 				0B7E34A7A7993D7190E49D8D /* Pods-StashAchievementsTests.debug.xcconfig */,
 				EEE7E23813472C90B4ED4EB5 /* Pods-StashAchievementsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -405,6 +432,7 @@
 			files = (
 				680ABF0E25D5AEA7005C1DC5 /* AchievementsListViewController.xib in Resources */,
 				680ABED325D5AD0F005C1DC5 /* LaunchScreen.storyboard in Resources */,
+				68EFE5CA25D74B3F0025F57A /* fakeAchievements.json in Resources */,
 				680ABED025D5AD0F005C1DC5 /* Assets.xcassets in Resources */,
 				680ABF3825D5AFA5005C1DC5 /* achievements.json in Resources */,
 				680ABF0725D5AE85005C1DC5 /* AchievementsListCollectionViewCell.xib in Resources */,
@@ -553,7 +581,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				680ABEDE25D5AD0F005C1DC5 /* StashAchievementsTests.swift in Sources */,
+				680AC05925D64AC7005C1DC5 /* AchievementsRouterTests.swift in Sources */,
+				680AC04225D6467E005C1DC5 /* AchievementsPresenterTests.swift in Sources */,
+				680AC05025D646F9005C1DC5 /* AchievementsInteractorTests.swift in Sources */,
+				680AC06525D64B90005C1DC5 /* AchievementsEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

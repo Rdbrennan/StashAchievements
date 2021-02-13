@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AchievementsModel: Codable {
+struct Achievement: Codable {
     let id: Int?
     let level: String?
     let progress, total: Int?
@@ -18,5 +18,14 @@ struct AchievementsModel: Codable {
         case id, level, progress, total
         case bgImageURL = "bg_image_url"
         case accessible
+    }
+
+    init(id: Int, level: String, progress: Int, total: Int, bgImageURL: String, accessible: Bool) {
+        self.id = id
+        self.level = level
+        self.progress = progress
+        self.total = total
+        self.bgImageURL = bgImageURL
+        self.accessible = accessible
     }
 }

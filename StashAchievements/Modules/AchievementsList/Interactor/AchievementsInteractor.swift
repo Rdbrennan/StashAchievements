@@ -7,24 +7,28 @@
 
 import Foundation
 
-class AchievementsInteractor: AchievementsListPresentorToInteractorProtocol {
-
+class AchievementsInteractor: AchievementsListPresenterToInteractorProtocol {
 
     // MARK: - Properties
     weak var presenter: AchievementsListInteractorToPresenterProtocol?
-    var achievements: [AchievementsModel]?
+    var achievements: [Achievement]?
 
     // MARK: - Methods
-    func fetchAchievements() {
-        if let path = Bundle.main.path(forResource: "achievements", ofType: "json") {
+    func fetchAchievements(resource: String) {
+        if let path = Bundle.main.path(forResource: resource, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
                 let achievementsResponse = try decoder.decode(AchievementsResponse.self, from: data)
-                guard let articles = achievementsResponse.achievements else { return }
+                guard let articles = achievementsResponse.achievements else {
+                    self.presenter?.AchievementsFetchedFailed()
+                    return
+                }
                 self.achievements = articles
                 self.presenter?.AchievementsFetched()
+
             } catch let error {
+                self.presenter?.AchievementsFetchedFailed()
                 print(error)
             }
         }

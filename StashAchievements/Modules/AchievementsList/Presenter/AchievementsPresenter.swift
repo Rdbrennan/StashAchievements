@@ -11,19 +11,19 @@ class AchievementsPresenter: AchievementsListViewToPresenterProtocol {
 
     // MARK: - Properties
     weak var view: AchievementsListPresenterToViewProtocol?
-    var interactor: AchievementsListPresentorToInteractorProtocol?
+    var interactor: AchievementsListPresenterToInteractorProtocol?
     var router: AchievementsListPresenterToRouterProtocol?
 
     // MARK: - Methods
-    func updateView() {
-        interactor?.fetchAchievements()
+    func fetchAllAchievements() {
+        interactor?.fetchAchievements(resource: "achievements")
     }
 
     func getAchievementsListCount() -> Int? {
         return interactor?.achievements?.count
     }
 
-    func getAchievements(index: Int) -> AchievementsModel? {
+    func getAchievements(index: Int) -> Achievement? {
         return interactor?.achievements?[index]
     }
 }

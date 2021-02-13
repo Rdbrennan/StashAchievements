@@ -18,6 +18,25 @@ class AchievementsListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var achievementImageView: UIImageView!
     @IBOutlet weak var accessibleOverlay: UIView!
     @IBOutlet var achievementsProgressView: CustomProgressView!
+
+    var achievement: Achievement? {
+        didSet {
+            achievementId = achievement?.id
+            levelLabel.text = achievement?.level
+            if let progress = achievement?.progress,
+               let total = achievement?.total{
+                progressLabel.text = "\(progress)pts"
+                totalLabel.text = "\(total)pts"
+            }
+            if let url = URL(string: (achievement?.bgImageURL) ?? ""){
+                achievementImageView.af_setImage(withURL: url)
+            }
+            levelView.layer.opacity =  ((achievement?.accessible) ?? false) ? 0.9 : 1.0
+            let calculatedProgress = calculateProgress(progress: (achievement?.progress) ?? 0, total: (achievement?.total) ?? 0)
+            achievementsProgressView.progress = calculatedProgress
+            accessibleOverlay.isHidden = achievement?.accessible ?? false
+        }
+    }
     
     private lazy var setupUI: Void = {
         contentView.layer.cornerRadius = 12.0
@@ -39,18 +58,7 @@ class AchievementsListCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         _ = setupUI
     }
-    func setCell(id: Int, level: String, progress: Int, total: Int, imageURL: String, accessible: Bool) {
-        achievementId = id
-        levelLabel.text = level
-        progressLabel.text = "\(progress)pts"
-        totalLabel.text = "\(total)pts"
-        if let url = URL(string: imageURL){
-            achievementImageView.af_setImage(withURL: url)
-        }
-        levelView.layer.opacity =  accessible ? 0.9 : 1.0
-        achievementsProgressView.progress = calculateProgress(progress: progress, total: total)
-        accessibleOverlay.isHidden = accessible
-    }
+
     func calculateProgress(progress: Int, total: Int) -> Float{
         var progressResult = Float()
         progressResult = (Float(progress)/Float(total))

@@ -21,9 +21,9 @@ class AchievementsListViewController: UIViewController {
         super.viewDidLoad()
         setUpCollectionView()
         setupNavBar()
-        presenter?.updateView()
-
+        presenter?.fetchAllAchievements()
     }
+
     private func setupNavBar(){
         title = "Smart Investing"
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.463628605, green: 0.1680410472, blue: 0.8421655145, alpha: 1)
@@ -61,16 +61,16 @@ extension AchievementsListViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementsListCollectionViewCell.cellId, for: indexPath) as? AchievementsListCollectionViewCell
-        let row = indexPath.row
-        let achievement = presenter?.getAchievements(index: row)
-        guard let id = achievement?.id, let level = achievement?.level,
-              let progress = achievement?.progress, let total = achievement?.total,
-              let imageURL = achievement?.bgImageURL, let accessible = achievement?.accessible else {
-            return cell ?? UICollectionViewCell()
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementsListCollectionViewCell.cellId,
+                                                       for: indexPath) as? AchievementsListCollectionViewCell
+        else {
+            fatalError("cell misconfiguration")
         }
-        cell?.setCell(id: id, level: level, progress: progress, total: total, imageURL: imageURL, accessible: accessible)
-        return cell ?? UICollectionViewCell()
+        let achievement = presenter?.getAchievements(index: indexPath.row)
+        cell.achievement = achievement
+
+        return cell
     }
 }
 

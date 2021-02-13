@@ -13,27 +13,25 @@ protocol AchievementsListPresenterToViewProtocol: class {
     func showError()
 }
 
-
 protocol AchievementsListInteractorToPresenterProtocol: class {
     func AchievementsFetched()
     func AchievementsFetchedFailed()
 }
 
-protocol AchievementsListPresentorToInteractorProtocol: class {
+protocol AchievementsListPresenterToInteractorProtocol: class {
     var presenter: AchievementsListInteractorToPresenterProtocol? { get set }
-    var achievements: [AchievementsModel]? { get }
-
-    func fetchAchievements()
+    var achievements: [Achievement]? { get }
+    func fetchAchievements(resource: String) 
 }
 
 protocol AchievementsListViewToPresenterProtocol: class {
     var view: AchievementsListPresenterToViewProtocol? { get set }
-    var interactor: AchievementsListPresentorToInteractorProtocol? { get set }
+    var interactor: AchievementsListPresenterToInteractorProtocol? { get set }
     var router: AchievementsListPresenterToRouterProtocol? { get set }
 
-    func updateView()
+    func fetchAllAchievements()
     func getAchievementsListCount() -> Int?
-    func getAchievements(index: Int) -> AchievementsModel?
+    func getAchievements(index: Int) -> Achievement?
 }
 
 protocol AchievementsListPresenterToRouterProtocol: class {
