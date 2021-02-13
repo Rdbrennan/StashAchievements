@@ -12,7 +12,6 @@ class AchievementsRouter: AchievementsListPresenterToRouterProtocol{
 
     // MARK: - Methods
     class func createModule() -> UIViewController {
-
         let view = AchievementsListViewController()
         let presenter: AchievementsListViewToPresenterProtocol & AchievementsListInteractorToPresenterProtocol = AchievementsPresenter()
         let interactor: AchievementsListPresenterToInteractorProtocol = AchievementsInteractor()
